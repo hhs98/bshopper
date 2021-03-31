@@ -20,6 +20,7 @@ class ShopSerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     shopName = serializers.SerializerMethodField(read_only=True)
     reviews = serializers.SerializerMethodField(read_only=True)
+    owner = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
         model = Product
@@ -32,6 +33,9 @@ class ProductSerializer(serializers.ModelSerializer):
         reviews = obj.reviews.all()
         serializer = ReviewSerializer(reviews, many=True)
         return serializer.data
+
+    def get_owner(self, obj):
+        return obj.shop.user_id
 
 
 class UserSerializer(serializers.ModelSerializer):
