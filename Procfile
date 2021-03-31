@@ -1,1 +1,1 @@
-web: gunicorn bshopper.wsgi --log-file -
+web: python manage.py collectstatic --no-input; gunicorn bshopper.wsgi --log-file -
