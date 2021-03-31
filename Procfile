@@ -1,0 +1,1 @@
+web: gunicorn bshopper.wsgi --log-file -
