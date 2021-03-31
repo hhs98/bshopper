@@ -1,0 +1,35 @@
+@media (min-width: 576px) {
+    .card > a {
+        height: 24rem;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .card > a {
+        height: 15rem;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .card > a {
+        height: 13rem;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card > a {
+        height: 11rem;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+}
+
+
+
+
